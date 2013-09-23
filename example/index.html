@@ -17,10 +17,13 @@
     <script src="../dist/pprogress.js"></script>
 
     <script>
-    $('#progress').pprogress({
-      width: 400,
+    var progress = $('#progress');
+    progress.pprogress({
+      width: 50,
       fillColor: "rgba(0,0,0,0.7)"
     });
+
+    progress.pprogress('start');
     </script>
   </body>
 </html>
