@@ -37,6 +37,15 @@ el.pprogress('done')
 
 ###Advanced
 
+####Options (defaults shown)
+
+```javascript
+$(selector).pprogress({
+	size: '100px', //size of pie indicator.
+	color: '#000' //color of pie chart
+})
+```
+
 ####Set
 
 ```javascript
