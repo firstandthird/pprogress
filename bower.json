@@ -1,0 +1,21 @@
+{
+  "name": "pprogress",
+  "description": "Pie style progress inidcator",
+  "version": "0.1.0",
+  "homepage": "https://github.com/firstandthird/pprogress",
+  "license": "MIT",
+  "copyright": "First + Third",
+  "main": "dist/pprogress.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "assert": "*"
+  },
+  "ignore": [
+    "test",
+    "example",
+    "lib",
+    "Gruntfile.js",
+    "package.json"
+  ]
+}
