@@ -23,6 +23,10 @@
       fillColor: "rgba(0,0,0,0.7)"
     });
 
+    progress.on('complete', function() {
+      console.log('completed');
+    });
+    
     progress.pprogress('start');
     </script>
   </body>
