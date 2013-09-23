@@ -3,9 +3,24 @@
   <head>
     <meta charset="utf-8" />
     <title>pprogress example</title>
+    <style>
+    #progress {
+      background: #fff;
+    }
+    </style>
   </head>
   <body>
+  	<div id="progress"></div>
 
+  	<script src="../bower_components/jquery/jquery.min.js"></script>
+    <script src="../bower_components/fidel/dist/fidel.min.js"></script>
     <script src="../dist/pprogress.js"></script>
+
+    <script>
+    $('#progress').pprogress({
+      width: 400,
+      fillColor: "rgba(0,0,0,0.7)"
+    });
+    </script>
   </body>
 </html>
