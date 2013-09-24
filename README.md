@@ -51,10 +51,14 @@ $(selector).pprogress({
 ```
 
 ####Start
-Starts a fake loader that calls inc() at configured rate. You will need to call done() when you're ready for it to finish. Will max out at 90% or configured cap.
+Starts a fake loader that calls inc() at configured rate.You will need to call done() when you're ready for it to finish. Will max out at 90% or configured cap. If you pass in true the random loader will be disabled.
 
 ```javascript
 $(selector).pprogress('start');
+```
+
+```javascript
+$(selector).pprogress('start', true);
 ```
 
 ####Set

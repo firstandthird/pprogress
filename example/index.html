@@ -15,7 +15,8 @@
   	<script src="../bower_components/jquery/jquery.min.js"></script>
     <script src="../bower_components/fidel/dist/fidel.min.js"></script>
     <script src="../dist/pprogress.js"></script>
-    <button id="ProgressStart">Start</button> <button id="ProgressDone">Done</button>
+    <button id="ProgressStart">Start</button> <button id="ProgressStartManual">Start Manual</button> <button id="ProgressDone">Done</button><br>
+    <button id="ProgressInc20">Increment 20%</button> <button id="ProgressInc05">Increment 5%</button> <button id="ProgressSet">Set 50%</button>
 
     <script>
     var progress = $('#progress');
@@ -32,8 +33,24 @@
       progress.pprogress('start');
     });
 
+    $('#ProgressStartManual').one('click', function() {
+      progress.pprogress('start', true);
+    });
+
     $('#ProgressDone').one('click', function() {
       progress.pprogress('done');
+    });
+
+    $('#ProgressInc20').on('click', function() {
+      progress.pprogress('tick', 0.20);
+    });
+
+    $('#ProgressInc05').on('click', function() {
+      progress.pprogress('tick', 0.05);
+    });
+
+    $('#ProgressSet').on('click', function() {
+      progress.pprogress('set', 0.50);
     });
     </script>
   </body>
