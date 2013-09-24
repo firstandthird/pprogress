@@ -5,7 +5,7 @@
     <title>pprogress example</title>
     <style>
     #progress {
-      background: #fff;
+      background: url(http://lorempixel.com/400/400/technics/) no-repeat;
     }
     </style>
   </head>
@@ -15,19 +15,24 @@
   	<script src="../bower_components/jquery/jquery.min.js"></script>
     <script src="../bower_components/fidel/dist/fidel.min.js"></script>
     <script src="../dist/pprogress.js"></script>
+    <button id="ProgressDone">Done</button>
 
     <script>
     var progress = $('#progress');
     progress.pprogress({
-      width: 50,
+      width: 400,
       fillColor: "rgba(0,0,0,0.7)"
     });
 
     progress.on('complete', function() {
       console.log('completed');
     });
-    
+
     progress.pprogress('start');
+
+    $('#ProgressDone').one('click', function() {
+      progress.pprogress('done');
+    });
     </script>
   </body>
 </html>
