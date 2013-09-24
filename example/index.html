@@ -15,7 +15,7 @@
   	<script src="../bower_components/jquery/jquery.min.js"></script>
     <script src="../bower_components/fidel/dist/fidel.min.js"></script>
     <script src="../dist/pprogress.js"></script>
-    <button id="ProgressDone">Done</button>
+    <button id="ProgressStart">Start</button> <button id="ProgressDone">Done</button>
 
     <script>
     var progress = $('#progress');
@@ -28,7 +28,9 @@
       console.log('completed');
     });
 
-    progress.pprogress('start');
+    $('#ProgressStart').one('click', function() {
+      progress.pprogress('start');
+    });
 
     $('#ProgressDone').one('click', function() {
       progress.pprogress('done');
