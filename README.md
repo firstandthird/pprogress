@@ -41,21 +41,48 @@ el.pprogress('done')
 
 ```javascript
 $(selector).pprogress({
-	size: '100px', //size of pie indicator.
-	color: '#000' //color of pie chart
+	width: 100, //size of pie indicator
+	fillColor: "rgba(0,0,0,0.25)", //color of pie chart
+  speed: 500, //speed for fake loader
+  rate: 0.02, //modifier for inc() and start(). Will by multiplied by Math.random()
+  cap: 0.90, //max percent complete start() will go
+  ease: function(t, b, c, d){} //easing function to use. See: http://www.gizma.com/easing/ for available functions
 })
 ```
 
+####Start
+Starts a fake loader that calls inc() at configured rate. You will need to call done() when you're ready for it to finish. Will max out at 90% or configured cap.
+
+```javascript
+$(selector).pprogress('start');
+```
+
 ####Set
+Sets the current percent complete.
 
 ```javascript
 $(selector).pprogress('set', 0.5)
 ```
 
 ####Increment
+Increments by random amounts. 
 
 ```javascript
 $(selector).pprogress('inc')
+```
+
+####Tick
+Incremements by a set amount. Adds passed value to existing percent complete.
+
+```javascript
+$(selector).pprogress('tick', 0.02);
+````
+
+####Done
+Sets completion to 100%
+
+```javascript
+$(selector).pprogress('done');
 ```
 
 ##Development
