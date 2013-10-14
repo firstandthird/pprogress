@@ -7,16 +7,17 @@
   "copyright": "First + Third",
   "main": "dist/pprogress.js",
   "dependencies": {
-    "fidel": "~2.2.3"
   },
   "devDependencies": {
-    "assert": "*"
+    "assert": "*",
+    "blanket": "*"
   },
   "ignore": [
     "test",
     "example",
     "lib",
     "Gruntfile.js",
-    "package.json"
+    "package.json",
+    "grunt"
   ]
 }

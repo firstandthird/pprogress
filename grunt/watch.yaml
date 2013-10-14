@@ -1,16 +1,27 @@
-scripts:
-  files: '<%= jshint.main %>'
-  tasks: 'scripts'
-  options: 
-    livereload: true
+options:
+  livereload: true
+lib:
+  files:
+    - '<%= jshint.lib %>'
+  tasks:
+    - 'jshint'
+    - 'script-dist'
+    - 'mocha'
+    - 'notify:tests'
+test:
+  files:
+    - '<%= jshint.test %>'
+    - 'test/index.html'
+  tasks:
+    - 'jshint'
+    - 'mocha'
+    - 'notify:tests'
 example:
   files:
     - 'example/*'
-  options:
-    livereload: true
-grunt:
+build:
   files:
+    - 'bower.json'
     - 'Gruntfile.js'
     - 'grunt/*.yaml'
-    - 'test/index.html'
   tasks: 'default'
