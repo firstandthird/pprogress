@@ -2,7 +2,7 @@
 
 jQuery plugin for a pie style progress inidcator.  Heavily inspired by iOS7 and [nprogress](http://ricostacruz.com/nprogress/).
 
-*Screenshot goes here*
+![screenshot](https://raw.github.com/firstandthird/pprogress/master/screenshot.png)
 
 ##Installation
 
